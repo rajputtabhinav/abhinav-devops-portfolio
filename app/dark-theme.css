@@ -1,0 +1,348 @@
+/* --------------------------------------------------------------------------
+   Theme switch + dark palette (Kelly template overrides)
+   -------------------------------------------------------------------------- */
+
+.theme-toggle-slot {
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.theme-simple-toggle {
+  align-items: center;
+  background: rgba(226, 232, 240, 0.85);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  height: 26px;
+  outline: none;
+  padding: 3px;
+  position: relative;
+  width: 46px;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.theme-simple-toggle:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+.theme-simple-toggle[aria-checked="true"] {
+  background: rgba(45, 212, 191, 0.32);
+  border-color: rgba(13, 148, 136, 0.45);
+}
+
+.theme-simple-toggle__thumb {
+  align-items: center;
+  aspect-ratio: 1;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.12),
+    0 1px 3px rgba(15, 23, 42, 0.08);
+  display: inline-flex;
+  flex-shrink: 0;
+  height: 20px;
+  justify-content: center;
+  pointer-events: none;
+  transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 20px;
+}
+
+.theme-simple-toggle__icon {
+  color: #d97706;
+  display: block;
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+.theme-simple-toggle[aria-checked="true"] .theme-simple-toggle__icon {
+  color: #0f766e;
+}
+
+.theme-simple-toggle[aria-checked="true"] .theme-simple-toggle__thumb {
+  transform: translateX(20px);
+}
+
+html[data-theme="dark"] .theme-simple-toggle:not([aria-checked="true"]) .theme-simple-toggle__icon {
+  color: #fbbf24;
+}
+
+html[data-theme="dark"] .theme-simple-toggle:not([aria-checked="true"]) {
+  background: rgba(148, 163, 184, 0.16);
+  border-color: rgba(148, 163, 184, 0.28);
+}
+
+html[data-theme="dark"] .theme-simple-toggle:not([aria-checked="true"]) .theme-simple-toggle__thumb {
+  background: #f1f5f9;
+}
+
+html[data-theme="dark"] .theme-simple-toggle[aria-checked="true"] {
+  background: rgba(45, 212, 191, 0.22);
+  border-color: rgba(94, 234, 212, 0.45);
+}
+
+html[data-theme="dark"] .theme-simple-toggle[aria-checked="true"] .theme-simple-toggle__icon {
+  color: #5eead4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-simple-toggle__thumb {
+    transition-duration: 0.01ms;
+  }
+
+  .theme-simple-toggle {
+    transition-duration: 0.01ms;
+  }
+}
+
+/* --- Dark semantic tokens (Kelly + layout) -------------------------------- */
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --background-color: #090b10;
+  --default-color: #cbd5e1;
+  --heading-color: #f1f5f9;
+  --accent-color: #2dd4bf;
+  --surface-color: #12151f;
+  --contrast-color: #0b0d13;
+
+  --nav-color: #e2e8f0;
+  --nav-hover-color: #5eead4;
+  --nav-mobile-background-color: #141722;
+  --nav-dropdown-background-color: #141722;
+  --nav-dropdown-color: #e2e8f0;
+  --nav-dropdown-hover-color: #5eead4;
+}
+
+html[data-theme="dark"] body {
+  background-color: var(--background-color);
+}
+
+html[data-theme="dark"] .light-background {
+  --background-color: #0f131c;
+  --surface-color: #161b26;
+}
+
+html[data-theme="dark"] .main {
+  background: #090b10;
+}
+
+html[data-theme="dark"] .section-title p {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .portfolio-hero {
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(15, 30, 40, 0.92)),
+    repeating-linear-gradient(90deg, rgba(148, 163, 184, 0.06) 0 1px, transparent 1px 72px),
+    repeating-linear-gradient(0deg, rgba(148, 163, 184, 0.05) 0 1px, transparent 1px 72px);
+}
+
+html[data-theme="dark"] .portfolio-hero p {
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .featured-projects {
+  background: #090b10;
+}
+
+html[data-theme="dark"] .startup-section {
+  background: #07080c;
+}
+
+html[data-theme="dark"] .startup-band h2,
+html[data-theme="dark"] .startup-band h3 {
+  color: var(--heading-color);
+}
+
+html[data-theme="dark"] .startup-band p {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .startup-focus li {
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .startup-focus i {
+  color: #5eead4;
+}
+
+@media (max-width: 991px) {
+  html[data-theme="dark"] .startup-focus {
+    border-top-color: rgba(148, 163, 184, 0.18);
+  }
+}
+
+@media (min-width: 992px) {
+  html[data-theme="dark"] .startup-focus {
+    border-left-color: rgba(148, 163, 184, 0.18);
+  }
+}
+
+html[data-theme="dark"] .project-card {
+  background: #12151f;
+  border-color: rgba(148, 163, 184, 0.15);
+}
+
+html[data-theme="dark"] .project-card-body h3 {
+  color: var(--heading-color);
+}
+
+html[data-theme="dark"] .project-card-body p {
+  color: #94a3b8;
+}
+
+html[data-theme="dark"] .hero-proof span,
+html[data-theme="dark"] .stack-badges span {
+  background: #141822;
+  border-color: rgba(148, 163, 184, 0.15);
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .hero-proof strong {
+  color: var(--heading-color);
+}
+
+html[data-theme="dark"] .btn-secondary-action {
+  background: transparent;
+  border-color: rgba(45, 212, 191, 0.4);
+  color: #5eead4;
+}
+
+html[data-theme="dark"] .btn-icon-action {
+  background: #141822;
+  border-color: rgba(148, 163, 184, 0.2);
+  color: #5eead4;
+}
+
+html[data-theme="dark"] .architecture-list strong {
+  background: rgba(148, 163, 184, 0.12);
+  border-color: transparent;
+  color: var(--heading-color);
+}
+
+html[data-theme="dark"] .case-study-section {
+  border-top-color: rgba(148, 163, 184, 0.15);
+}
+
+html[data-theme="dark"] .case-study-section p,
+html[data-theme="dark"] .case-study-section li {
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .about .content {
+  color: #cbd5e1;
+}
+
+html[data-theme="dark"] .services .service-item {
+  background: #12151f;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+}
+
+html[data-theme="dark"] .services .service-item p {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .services .service-item h3 {
+  color: var(--heading-color) !important;
+}
+
+html[data-theme="dark"] .services .service-item.item-cyan i {
+  color: #5eead4 !important;
+}
+
+html[data-theme="dark"] .skills .progress .skill {
+  color: var(--heading-color);
+}
+
+html[data-theme="dark"] .resume .resume-title {
+  color: var(--heading-color);
+}
+
+html[data-theme="dark"] .footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+html[data-theme="dark"] #scroll-top {
+  background-color: rgba(45, 212, 191, 0.2);
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  color: #5eead4;
+}
+
+html[data-theme="dark"] #scroll-top:hover {
+  background-color: rgba(45, 212, 191, 0.35);
+  color: #ecfdf5;
+}
+
+html[data-theme="dark"] .form-control {
+  background-color: #12151f;
+  border-color: rgba(148, 163, 184, 0.25);
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .form-control:focus {
+  border-color: #2dd4bf;
+  box-shadow: 0 0 0 0.2rem rgba(45, 212, 191, 0.15);
+}
+
+html[data-theme="dark"] label {
+  color: #cbd5e1;
+}
+
+/* Glass header dark */
+html[data-theme="dark"] header#header.header {
+  background: rgba(12, 14, 22, 0.72) !important;
+  backdrop-filter: blur(14px) saturate(135%);
+  -webkit-backdrop-filter: blur(14px) saturate(135%);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    0 4px 26px rgba(0, 0, 0, 0.45);
+}
+
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  html[data-theme="dark"] header#header.header {
+    background: #0f131c !important;
+  }
+}
+
+html[data-theme="dark"] header#header.header.light-background {
+  --background-color: transparent;
+}
+
+html[data-theme="dark"] body.scrolled header#header.header {
+  background: rgba(10, 12, 20, 0.88) !important;
+}
+
+html[data-theme="dark"] .portfolio-filter-btn {
+  border-color: rgba(94, 234, 212, 0.28);
+  color: #e2e8f0;
+}
+
+@media (max-width: 1199px) {
+  html[data-theme="dark"] .mobile-nav-active .navmenu {
+    background: rgba(6, 8, 14, 0.82);
+  }
+
+  /* Unified inline header: keep scroll strip transparent (not overlay panel) */
+  html[data-theme="dark"] header#header.header #navmenu.navmenu-unified > ul.navmenu-scroll {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  html[data-theme="dark"] header#header.header .navmenu ul:not(.navmenu-scroll) {
+    background-color: rgba(20, 23, 34, 0.96) !important;
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45);
+  }
+}
