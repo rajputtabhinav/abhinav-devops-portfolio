@@ -198,7 +198,7 @@ function Footer() {
             <span>All Rights Reserved</span>
           </p>
         </div>
-        <div className="credits">Built to showcase DevOps, automation, and platform engineering work.</div>
+        <div className="credits">Built to showcase AI engineering, LLM apps, automation, and platform work.</div>
       </div>
     </footer>
   );
@@ -254,8 +254,8 @@ export function HomeContent() {
               <span className="hero-kicker">{profile.role}</span>
               <h1 className="hero-title mb-0">{brandingName}</h1>
               <p>
-                DevOps engineer building container-first delivery on Docker and Compose, AWS-style cloud foundations, Terraform and CI/CD pipelines,
-                observability-backed platforms, and queue-driven automation—from local prod-shaped stacks to repeatable deploy paths.
+                AI Engineer building LLM-powered applications and agentic automation—RAG pipelines, AI agents, and MCP servers—on a strong Linux and
+                server-infrastructure base. Full-stack delivery from model integration through deployment, plus HPC/GPU benchmarking on NVIDIA B200/B300 servers.
               </p>
               <div className="hero-actions">
                 <Link href="/#portfolio" className="btn-get-started">
@@ -264,14 +264,20 @@ export function HomeContent() {
                 <Link href="/#contact" className="btn-secondary-action">
                   Contact Me
                 </Link>
+                <a href={profile.github} target="_blank" rel="noreferrer" className="btn-icon-action" aria-label={`${brandingName} on GitHub`}>
+                  <i className="bi bi-github" aria-hidden="true"></i>
+                </a>
+                <a href={profile.linkedin} target="_blank" rel="noreferrer" className="btn-icon-action" aria-label={`${brandingName} on LinkedIn`}>
+                  <i className="bi bi-linkedin" aria-hidden="true"></i>
+                </a>
                 <a href={`mailto:${profile.email}`} className="btn-icon-action" aria-label={`Email ${brandingName}`}>
                   <i className="bi bi-envelope" aria-hidden="true"></i>
                 </a>
               </div>
               <div className="hero-proof">
-                <span><strong>{projects.length}+</strong> platform projects</span>
-                <span><strong>Terraform/AWS</strong> infra patterns</span>
-                <span><strong>Queues</strong> workers, logs, alerts</span>
+                <span><strong>{projects.length}+</strong> shipped projects</span>
+                <span><strong>LLM agents</strong> + MCP servers</span>
+                <span><strong>HPC/GPU</strong> benchmarking</span>
               </div>
             </div>
           </div>
@@ -365,11 +371,11 @@ export function AboutContent() {
               <div className="row">
                 <div className="col-lg-6">
                   <ul>
-                    <li><i className="bi bi-chevron-right" aria-hidden="true"></i> <strong>Focus:</strong> <span>DevOps, Platform Engineering, SRE-aligned delivery</span></li>
+                    <li><i className="bi bi-chevron-right" aria-hidden="true"></i> <strong>Focus:</strong> <span>AI Engineering — LLM apps, agents & MCP; platform / infra base</span></li>
                     <li><i className="bi bi-chevron-right" aria-hidden="true"></i> <strong>Name:</strong> <span>{brandingName}</span></li>
                     <li><i className="bi bi-chevron-right" aria-hidden="true"></i> <strong>Date of Birth:</strong> <span>{profile.dob}</span></li>
-                    <li><i className="bi bi-chevron-right" aria-hidden="true"></i> <strong>Location:</strong> <span>Kanpur, India</span></li>
-                    <li><i className="bi bi-chevron-right" aria-hidden="true"></i> <strong>Infrastructure:</strong> <span>Docker, Compose, Linux, Terraform, AWS, Kubernetes fundamentals, GitHub Actions, Nginx, Vercel</span></li>
+                    <li><i className="bi bi-chevron-right" aria-hidden="true"></i> <strong>Location:</strong> <span>Noida, India</span></li>
+                    <li><i className="bi bi-chevron-right" aria-hidden="true"></i> <strong>AI / LLM:</strong> <span>RAG, vector DBs, AI agents, MCP servers, LLM APIs (Claude, OpenAI, Gemini)</span></li>
                     <li><i className="bi bi-chevron-right" aria-hidden="true"></i> <strong>Data Layer:</strong> <span>PostgreSQL, Redis, MongoDB, Qdrant</span></li>
                   </ul>
                 </div>
@@ -444,7 +450,7 @@ export function ResumeContent() {
       <section id="resume" className="resume section">
         <div className="container section-title" data-aos="fade-up">
           <h2>Resume</h2>
-          <p>A concise view of my DevOps experience, tooling, and production-style project work.</p>
+          <p>A concise view of my AI engineering experience, tooling, and production-style project work.</p>
         </div>
         <div className="container">
           <div className="row">
@@ -452,7 +458,7 @@ export function ResumeContent() {
               <h3 className="resume-title">Summary</h3>
               <div className="resume-item pb-0">
                 <h4>{brandingName}</h4>
-                <p><em>DevOps and platform engineer working across containers and Compose, AWS primitives, Terraform, Kubernetes-oriented services, CI/CD with GitHub Actions, observability, workers, and AI-adjacent product infra.</em></p>
+                <p><em>AI Engineer building LLM-powered applications and agentic automation—RAG pipelines, AI agents, and MCP servers—on a strong Linux and server-infrastructure base. Full-stack delivery (Next.js, FastAPI, Node.js) plus HPC/GPU benchmarking on NVIDIA B200/B300.</em></p>
                 <ul>
                   <li>{profile.city}</li>
                   <li>{profile.phone}</li>
@@ -780,7 +786,7 @@ export function ContactContent() {
       <section id="contact" className="contact section">
         <div className="container section-title" data-aos="fade-up">
           <h2>Contact</h2>
-          <p>Reach out for DevOps, platform engineering, automation, backend systems, and infrastructure-focused opportunities.</p>
+          <p>Reach out for AI engineering, LLM applications, agents & automation, full-stack, and infrastructure-focused opportunities.</p>
         </div>
         <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row gy-4">
@@ -807,9 +813,20 @@ export function ContactContent() {
                     <p>{profile.email}</p>
                   </div>
                 </div>
+                <div className="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                  <i className="bi bi-person-lines-fill flex-shrink-0" aria-hidden="true"></i>
+                  <div>
+                    <h3>Profiles</h3>
+                    <p>
+                      <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
+                      {" · "}
+                      <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+                    </p>
+                  </div>
+                </div>
                 <iframe
-                  title="Map of Kanpur, Uttar Pradesh, India"
-                  src="https://www.google.com/maps?q=Kanpur%2C%20Uttar%20Pradesh%2C%20India&z=11&output=embed"
+                  title="Map of Noida, Uttar Pradesh, India"
+                  src="https://www.google.com/maps?q=Noida%2C%20Uttar%20Pradesh%2C%20India&z=11&output=embed"
                   frameBorder="0"
                   style={{ border: 0, width: "100%", height: "270px" }}
                   allowFullScreen

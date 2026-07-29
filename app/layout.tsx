@@ -10,24 +10,24 @@ import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 import "./dark-theme.css";
 
-const pageTitle = `${brandingName} | DevOps & Platform Engineer`;
+const pageTitle = `${brandingName} | AI Engineer`;
+
+const pageDescription =
+  "AI Engineer — LLM apps, RAG pipelines, AI agents & MCP servers, LLM APIs (Claude/OpenAI/Gemini), full-stack (Next.js/FastAPI/Node.js), on a Linux & HPC/GPU infrastructure base.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: pageTitle,
-  description:
-    "DevOps & platform engineer — Docker, AWS, Terraform, Kubernetes patterns, CI/CD, observability, queues, Compose-first stacks, and production-shaped delivery.",
+  description: pageDescription,
   openGraph: {
     title: pageTitle,
-    description:
-      "Containers, AWS + Terraform, Kubernetes-oriented design, CI/CD, observability, and automation-heavy platform work.",
+    description: pageDescription,
     type: "website",
   },
   twitter: {
     card: "summary",
     title: pageTitle,
-    description:
-      "Containers, AWS + Terraform, Kubernetes-oriented design, CI/CD, observability, and automation-heavy platform work.",
+    description: pageDescription,
   },
   icons: {
     icon: [{ url: "/logo.svg", type: "image/svg+xml" }],

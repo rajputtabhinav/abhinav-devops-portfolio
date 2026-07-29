@@ -20,13 +20,15 @@ export const profile = {
   name: "Abhinav",
   /** Alternate given name — both appear in branding site-wide */
   alternateName: "Shailendra",
-  role: "DevOps & Platform Engineer",
-  company: "Raptorvoid Private Limited",
+  role: "AI Engineer",
+  company: "Netweb Technologies India Ltd.",
   email: "rajputtabhinav@outlook.com",
   phone: "+91 8299072802",
-  city: "Kanpur, Uttar Pradesh, India",
+  city: "Noida, Uttar Pradesh, India",
   dob: "30/09/2004",
   degree: "Bachelor from Kanpur University",
+  github: "https://github.com/rajputtabhinav",
+  linkedin: "https://www.linkedin.com/in/shailendra-rajput-47671532b",
 };
 
 /** Header, titles, footer — both names */
@@ -83,16 +85,16 @@ export const focusAreas = [
 ];
 
 export const skills = [
-  { label: "Docker, containers & Docker Compose", value: 96 },
-  { label: "AWS (VPC, IAM, EC2–class compute, RDS, S3, CloudWatch)", value: 86 },
-  { label: "Terraform / IaC (modules, state, repeatable envs)", value: 84 },
-  { label: "Kubernetes basics (Deployments, Services, Ingress, Helm)", value: 80 },
-  { label: "CI/CD — GitHub Actions, gated deploy scripts", value: 85 },
-  { label: "Linux, shell automation & systemd-style operations", value: 91 },
-  { label: "Nginx ingress, TLS & reverse-proxy topologies", value: 87 },
-  { label: "PostgreSQL, Redis & queue-backed pipelines", value: 89 },
-  { label: "Observability — metrics, logs, probes, alerting", value: 91 },
-  { label: "FastAPI, Node.js & Next.js at the edge of the platform", value: 86 },
+  { label: "LLM apps — RAG, AI agents, MCP servers, LLM APIs (Claude / OpenAI / Gemini)", value: 92 },
+  { label: "Python, TypeScript & JavaScript", value: 90 },
+  { label: "Next.js, React, Node.js & FastAPI", value: 89 },
+  { label: "PostgreSQL, MongoDB, Redis & queue-backed pipelines (BullMQ)", value: 88 },
+  { label: "Docker, containers & Docker Compose", value: 90 },
+  { label: "AWS (EC2, S3, Lambda, Cognito, SageMaker) & Vercel", value: 84 },
+  { label: "CI/CD — GitHub Actions, gated deploy scripts", value: 84 },
+  { label: "Linux administration (RHEL / Ubuntu), shell automation & systemd", value: 91 },
+  { label: "HPC / GPU benchmarking — NVIDIA B200/B300, MLPerf, HPL-AI, fio, stress-ng", value: 86 },
+  { label: "BMC/BIOS & GPU firmware, IPMI, SSH automation", value: 88 },
 ];
 
 export const projects: Project[] = [
