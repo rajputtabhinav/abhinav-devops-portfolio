@@ -54,7 +54,7 @@ export async function POST(request: Request) {
       model: MODEL,
       stream: true,
       temperature: 0.4,
-      max_tokens: 700,
+      max_tokens: 320,
       messages: [{ role: "system", content: assistantSystemPrompt }, ...cleaned],
     }),
   });
