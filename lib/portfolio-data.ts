@@ -53,34 +53,34 @@ export const startup = {
 
 export const focusAreas = [
   {
-    title: "Containerized Delivery",
+    title: "LLM Application Engineering",
     description:
-      "Docker images, Compose stacks, registry workflows, multi-service topology, health probes, persistent volumes, and environment-driven configs that mirror prod.",
+      "Production LLM apps with prompt engineering, structured outputs, streaming, evaluation and guardrails, and LLM API integration across Anthropic Claude, OpenAI, and Gemini.",
   },
   {
-    title: "Cloud & Infrastructure as Code",
+    title: "AI Agents & MCP Servers",
     description:
-      "AWS primitives (VPC, IAM, EC2/EKS-ready shapes, RDS, S3), Terraform modules for repeatable environments, and safe network and access patterns.",
+      "Agentic workflows with tool use and function calling, plus Model Context Protocol (MCP) servers that let models run, test, and operate real systems programmatically.",
   },
   {
-    title: "CI/CD & GitOps-ready releases",
+    title: "RAG & Retrieval",
     description:
-      "GitHub Actions pipelines, scripted deploy gates, rollout checks alongside containers, secrets outside images, and roll-forward-friendly delivery.",
+      "Retrieval-Augmented Generation over vector databases (Qdrant), embeddings, chunking, and grounding responses in domain-specific data to reduce off-topic answers.",
   },
   {
-    title: "Kubernetes & orchestration fundamentals",
+    title: "Full-Stack Product Delivery",
     description:
-      "Workload manifests (Deployments/Services/Ingress expectations), Helm-style packaging awareness, readiness/liveness probes, and cluster-friendly service boundaries.",
+      "End-to-end apps in Next.js, React, Node.js, and FastAPI with PostgreSQL, MongoDB, and Redis, queue-backed workers (BullMQ), and realtime via Socket.io / WebSockets.",
   },
   {
-    title: "Observability & control planes",
+    title: "HPC & GPU Benchmarking",
     description:
-      "Dashboards, status streams, audit trails, alert rules, schedules, and APIs that expose how the platform is behaving under load.",
+      "AI and HPC benchmarking on NVIDIA B200 / B300 GPU servers with MLPerf and HPL-AI, plus fio and stress-ng validation and automated report generation.",
   },
   {
-    title: "Queues, workers & platform automation",
+    title: "Platform & Infra Base",
     description:
-      "BullMQ, Celery, and similar queue topologies—retries, beat schedules, backpressure-aware workers, plus automation that keeps runtime state honest.",
+      "Docker and Compose, AWS, CI/CD (GitHub Actions), Linux administration, BMC/BIOS and GPU firmware, IPMI, and SSH automation across server fleets.",
   },
 ];
 
@@ -112,10 +112,8 @@ export const projects: Project[] = [
       "Celery",
       "WebSockets",
       "Docker Compose",
-      "Terraform",
       "AWS",
       "GitHub Actions",
-      "Kubernetes",
     ],
     summary:
       "A unified server operating platform focused on safe task execution, runtime visibility, agent heartbeats, alert rules, recurring schedules, and audit-friendly operational workflows.",
@@ -152,7 +150,6 @@ export const projects: Project[] = [
       "Prometheus metrics",
       "GitHub Actions",
       "CI/CD",
-      "Terraform",
       "AWS",
     ],
     summary:
@@ -190,10 +187,8 @@ export const projects: Project[] = [
       "BullMQ",
       "Socket.io",
       "Docker Compose",
-      "Terraform",
       "AWS",
       "GitHub Actions",
-      "Kubernetes",
     ],
     summary:
       "A local-first AI-powered client management system using a monorepo structure and a separate worker path for background processing and event-driven workflows.",
@@ -229,9 +224,7 @@ export const projects: Project[] = [
       "Docker Compose",
       "SSH",
       "WebSockets",
-      "Terraform",
       "AWS",
-      "Kubernetes",
       "GitHub Actions",
     ],
     summary:
@@ -269,7 +262,6 @@ export const projects: Project[] = [
       "NextAuth",
       "WebSockets",
       "Vercel",
-      "Terraform",
       "AWS",
       "GitHub Actions",
     ],
@@ -307,10 +299,8 @@ export const projects: Project[] = [
       "Telegram Bot",
       "React",
       "Docker Compose",
-      "Terraform",
       "AWS",
       "GitHub Actions",
-      "Kubernetes",
     ],
     summary:
       "A product stack spanning backend, bot runtime, manual payment verification flows, and local containerized Mongo services for development and operations.",
@@ -349,7 +339,6 @@ export const projects: Project[] = [
       "Firebase (GCP)",
       "Express",
       "Docker",
-      "Terraform",
       "AWS",
       "GitHub Actions",
     ],
@@ -402,7 +391,6 @@ export const projects: Project[] = [
       "GitHub Actions",
       "CI/CD",
       "Docker",
-      "Terraform",
       "AWS",
     ],
     summary:
@@ -436,21 +424,21 @@ export function getProjectBySlug(slug: string) {
 
 export const timeline = [
   {
-    title: "Prometheus",
+    title: "AI agents, MCP servers & HPC benchmarking",
     period: "2026",
     description:
-      "Control-plane APIs, Celery topology, alerting and schedules—all packaged for repeatable Docker Compose bring-up that maps cleanly onto cloud VMs or future K8s targets.",
+      "SSH-based AI agent for automated multi-OS benchmarking, an MCP server that lets Claude run and benchmark servers, bulk BMC/BIOS & GPU firmware tooling, and MLPerf / HPL-AI benchmarking on NVIDIA B200/B300.",
   },
   {
     title: "Abhi2.0 / Latenite.ai / Zero.AI",
     period: "2025 - 2026",
     description:
-      "Container-shaped AI stacks (Compose, proxies, probes) wired to Postgres, Redis, BullMQ/Socket workloads, Terraform-friendly environment boundaries.",
+      "LLM-powered products—RAG over vector databases, agent workflows, and LLM API integration (Claude/OpenAI/Gemini)—backed by Postgres, Redis, and BullMQ/Socket workloads.",
   },
   {
-    title: "ServerQC Pro / EduStack / Amatic.ai",
-    period: "2025 - 2026",
+    title: "Dawasarthi / EduStack / Amatic.ai",
+    period: "2024 - 2026",
     description:
-      "Hardware validation tooling, SaaS-ish delivery concerns, Telegram product ops, Firebase + edge APIs—with CI/CD and scripted checks where releases matter.",
+      "Full-stack AI products: a healthcare app with a RAG-grounded chatbot, a Telegram mini-app platform with payments and referrals, and an AI education canvas with voice and visual explanations.",
   },
 ];

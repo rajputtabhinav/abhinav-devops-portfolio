@@ -287,7 +287,7 @@ export function HomeContent() {
       <section className="featured-projects section">
         <div className="container section-title" data-aos="fade-up">
           <h2>Featured Projects</h2>
-          <p>Selected systems showing platform engineering, automation, and AI infrastructure work.</p>
+          <p>Selected systems showing LLM applications, AI agents, automation, and full-stack product work.</p>
         </div>
         <div className="container">
           <div className="row gy-4">
@@ -343,30 +343,30 @@ export function AboutContent() {
       <section id="about" className="about section">
         <div className="container section-title" data-aos="fade-up">
           <h2>About</h2>
-          <p>DevOps-focused work across containers, cloud and IaC, CI/CD, observability dashboards, queues, Kubernetes-oriented designs, and production-shaped local environments.</p>
+          <p>AI-focused work across LLM applications, RAG pipelines, AI agents and MCP servers, full-stack products, and HPC/GPU benchmarking—on a strong Linux and server-infrastructure base.</p>
         </div>
 
         <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row gy-4 justify-content-center">
             <div className="col-lg-4">
               <div className="about-snapshot" aria-label="Profile capability snapshot">
-                <div className="snapshot-command">$ docker compose up</div>
-                <div className="snapshot-line ok">api healthy</div>
-                <div className="snapshot-line ok">worker ready</div>
-                <div className="snapshot-line ok">redis connected</div>
-                <div className="snapshot-line warn">alerts watched</div>
+                <div className="snapshot-command">$ agent run --task benchmark</div>
+                <div className="snapshot-line ok">mcp server connected</div>
+                <div className="snapshot-line ok">rag index ready</div>
+                <div className="snapshot-line ok">claude api streaming</div>
+                <div className="snapshot-line warn">gpu benchmark running</div>
                 <div className="snapshot-summary">
                   <strong>Focus</strong>
-                  <span>Reliable systems that are visible, repeatable, and easier to operate.</span>
+                  <span>LLM apps and agents that are grounded, evaluated, and easy to operate.</span>
                 </div>
               </div>
             </div>
             <div className="col-lg-8 content">
-              <h2>DevOps Engineer focused on automation, reliability, and platform delivery.</h2>
+              <h2>AI Engineer focused on LLM applications, agentic automation, and full-stack delivery.</h2>
               <p className="fst-italic py-3">
-                I build systems that are easy to run, visible in production, and structured for scale from day one.
-                I am also building {startup.product} under {startup.name}, focused on AI-assisted self-study for
-                students and smarter teaching workflows for teachers.
+                I build LLM-powered applications and AI agents that are grounded, evaluated, and easy to operate—on
+                a strong Linux and server-infrastructure base. I am also building {startup.product} under {startup.name},
+                focused on AI-assisted self-study for students and smarter teaching workflows for teachers.
               </p>
               <div className="row">
                 <div className="col-lg-6">
@@ -389,10 +389,10 @@ export function AboutContent() {
                 </div>
               </div>
               <p className="py-3">
-                My recent work spans multi-service AI products, internal automation systems, hardware validation tooling,
-                and observability dashboards. Across Prometheus, Abhi2.0, Latenite.ai, ServerQC Pro, Zero.AI, and
-                EduStack, and {startup.product}, I have worked with health checks, service dependencies, reverse
-                proxies, background workers, live monitoring, and production-oriented local environments.
+                My recent work spans LLM-powered products, AI agents and MCP servers, internal automation, and
+                HPC/GPU benchmarking. Across Prometheus, Abhi2.0, Latenite.ai, Zero.AI, EduStack, and {startup.product},
+                I have worked with RAG pipelines, vector search, LLM API integration, background workers, realtime
+                events, and production-oriented local environments.
               </p>
             </div>
           </div>
@@ -474,16 +474,16 @@ export function ResumeContent() {
                 <p>{startup.summary}</p>
               </div>
               <div className="resume-item">
-                <h4>Infrastructure &amp; Runtime</h4>
+                <h4>AI / LLM Engineering</h4>
                 <h5>Primary focus</h5>
-                <p><em>Docker, Compose, Terraform, Kubernetes baselines (Deployments/Services/Ingress), AWS (VPC-shaped networking, IAM, EC2/classic compute, RDS, S3), GitHub Actions, Nginx ingress, Linux-first scripting, secrets outside images.</em></p>
-                <p>I design infra that can be recreated: modules and remote state concepts, parameterized envs, health probes, gated deploy steps, then the same graphs and alerts that validate production behavior.</p>
+                <p><em>RAG pipelines, vector databases (Qdrant), embeddings, AI agents, MCP servers, tool use / function calling, structured outputs, prompt engineering, evaluation, and LLM APIs (Claude, OpenAI, Gemini).</em></p>
+                <p>I build LLM apps that are grounded in domain data, evaluated for quality, and wired into real systems through agents and MCP servers rather than one-off chat calls.</p>
               </div>
               <div className="resume-item">
-                <h4>Backend, Data &amp; Operations</h4>
+                <h4>Full-Stack, Data &amp; Infrastructure</h4>
                 <h5>Primary focus</h5>
-                <p><em>FastAPI, Express, Go services, PostgreSQL, Redis, MongoDB, Prisma, SQLAlchemy, BullMQ, Celery, WebSockets</em></p>
-                <p>Most of my recent systems rely on durable data stores, asynchronous workers, event pipelines, and observability-friendly APIs.</p>
+                <p><em>Next.js, React, Node.js, Express, FastAPI, PostgreSQL, MongoDB, Redis, BullMQ, Socket.io; Docker, AWS, Vercel, GitHub Actions, Linux administration; HPC/GPU benchmarking (NVIDIA B200/B300, MLPerf, HPL-AI), BMC/BIOS & GPU firmware, IPMI, SSH automation.</em></p>
+                <p>Most of my systems pair durable data stores and background workers with a Linux and server-infrastructure base I can operate, benchmark, and automate.</p>
               </div>
             </div>
 
@@ -493,7 +493,7 @@ export function ResumeContent() {
                 <div className="resume-item" key={item.title}>
                   <h4>{item.title}</h4>
                   <h5>{item.period}</h5>
-                  <p><em>DevOps and platform engineering-aligned system work</em></p>
+                  <p><em>AI engineering and full-stack system work</em></p>
                   <p>{item.description}</p>
                 </div>
               ))}
@@ -520,7 +520,7 @@ export function ServicesContent() {
       <section id="services" className="services section">
         <div className="container section-title" data-aos="fade-up">
           <h2>Expertise</h2>
-          <p>DevOps and platform engineering expertise: containers, cloud, Terraform, Kubernetes, CI/CD, observability, and reliable backend delivery.</p>
+          <p>AI engineering expertise: LLM applications, AI agents & MCP servers, RAG, full-stack delivery, HPC/GPU benchmarking, and a solid platform and infrastructure base.</p>
         </div>
         <div className="container">
           <div className="row gy-4">
