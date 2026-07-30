@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { brandingName } from "@/lib/portfolio-data";
+import { SiteLogo } from "@/components/site-logo";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -105,13 +106,13 @@ export default function PortfolioAssistant() {
         onClick={() => setOpen((v) => !v)}
         title="Ask about Abhinav"
       >
-        <i className={`bi ${open ? "bi-x-lg" : "bi-robot"}`} aria-hidden="true" />
+        {open ? <i className="bi bi-x-lg" aria-hidden="true" /> : <SiteLogo size={30} className="pa-logo" />}
         {!open && <span className="pa-dot" aria-hidden="true" />}
       </button>
 
       <div className={`pa-panel ${open ? "pa-open" : ""}`} role="dialog" aria-label="Portfolio assistant" aria-hidden={!open}>
         <div className="pa-header">
-          <div className="pa-header-icon"><i className="bi bi-robot" aria-hidden="true" /></div>
+          <div className="pa-header-icon"><SiteLogo size={22} /></div>
           <div className="pa-header-text">
             <strong>Portfolio Assistant</strong>
             <span>Ask anything about {brandingName}</span>
