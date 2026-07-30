@@ -232,14 +232,6 @@ export function LegacyShell({
       <Header />
       {children}
       <Footer />
-      <a
-        href="#home"
-        id="scroll-top"
-        className="scroll-top d-flex align-items-center justify-content-center"
-        aria-label="Back to top"
-      >
-        <i className="bi bi-arrow-up-short" aria-hidden="true"></i>
-      </a>
     </>
   );
 }
