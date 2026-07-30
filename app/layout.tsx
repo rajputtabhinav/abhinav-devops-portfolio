@@ -7,6 +7,7 @@ import "@fontsource/inter/700.css";
 import "@fontsource/jetbrains-mono/500.css";
 import { brandingName } from "@/lib/portfolio-data";
 import { getSiteUrl } from "@/lib/site-url";
+import PortfolioAssistant from "@/components/portfolio-assistant";
 import "./globals.css";
 import "./dark-theme.css";
 
@@ -70,6 +71,7 @@ export default function RootLayout({
 })();
 `}</Script>
         {children}
+        <PortfolioAssistant />
         <Script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" strategy="afterInteractive" />
         <Script src="/assets/vendor/aos/aos.js" strategy="afterInteractive" />
         <Script src="/assets/vendor/waypoints/noframework.waypoints.js" strategy="afterInteractive" />
