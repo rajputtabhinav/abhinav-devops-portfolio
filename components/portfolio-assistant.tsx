@@ -175,8 +175,8 @@ const paStyles = `
 .pa-launcher i{font-size:20px;line-height:1;}
 .pa-launcher-open{background:#111827;}
 
-.pa-panel{position:fixed;right:24px;bottom:90px;z-index:99998;width:min(380px,calc(100vw - 32px));
-  height:min(680px,calc(100vh - 120px));display:flex;flex-direction:column;overflow:hidden;
+.pa-panel{position:fixed;right:24px;bottom:24px;z-index:99998;width:min(380px,calc(100vw - 32px));
+  height:min(620px,calc(100vh - 150px));display:flex;flex-direction:column;overflow:hidden;
   background:var(--pa-bg);color:var(--pa-ink);border:1px solid var(--pa-line);border-radius:16px;
   box-shadow:0 16px 48px rgba(17,24,39,.16);opacity:0;transform:translateY(12px);transform-origin:bottom right;
   pointer-events:none;transition:opacity .16s ease,transform .16s ease;}
